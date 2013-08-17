@@ -8,6 +8,12 @@ table {
 }
 tr {
   margin-top: 1em;
+  opacity: 0.618;
+  filter: alpha(opacity=0.618);
+}
+tr:hover {
+  opacity: 1;
+  filter: alpha(opacity=1); 
 }
 td {
 }
@@ -17,6 +23,7 @@ td:first-child {
   text-align: right;
   padding-right: 0.25em;
   border-bottom: 1px dotted grey;
+  border-left: 0.1em solid rgba(0,100,0,0);
 }
 textarea {
   width: 100%;
@@ -35,16 +42,50 @@ input.field {
   border-top: 2px solid white;
   border-left: 2px solid white;
   border-right: 2px solid white;
-  border-bottom: 2px dotted  #aaaaaa;
+  border-bottom: 1px solid  #aaaaaa;
   padding: 0.5em;
-  width: available;
+  width: 5em;
+  max-width: 40em;
+  font-family: monospace;
 }
 input.field:focus {
-/*  border-bottom: 2px solid #2e96db;*/
+  border-bottom: 2px solid #2e96db;
 }
 input[type="button"] {
-    margin-left: 1em;
-    margin-right: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+input[type="checkbox"] {
+  width: 1.5em;
+  height: 1.5em;
+}
+input#send {
+  padding: 0.5em 5em 0.5em 5em;
+  margin: 0;
+  color: dimgrey;
+  background: lightgrey;
+  border: 1px solid lightgrey;
+  border-radius: 0.5em 0 0 0.5em;
+}
+input#send:hover {
+  color: darkgreen;
+  border: 1px solid green;
+}
+input[type="button"]:active {
+  position:relative;
+  top: 0.1em;
+}
+input#clear {
+  padding: 0.5em;
+  margin: 0;
+  color: lightgrey;
+  background: darkred;
+  border: 1px solid darkred;
+  border-radius: 0 0.5em 0.5em 0;
+}
+input#clear:hover {
+  color: white;
+  border: 1px solid darksalmon;
 }
 .note {
   color: slategrey;
@@ -54,10 +95,28 @@ ul {
   list-style-type: square;
 }
 td.filled {
-  border-bottom: 1px solid green;
+  border-left: 0.1em solid rgba(0,100,0,255);
 }
 div.alert {
   display: none;
   color: firebrick;
   padding: 0.5em;
+}
+select {
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom: 1px solid  #aaaaaa;
+  background: white;
+}
+#button-bar {
+  position: relative;
+  padding: 2em;
+  top: 2em;
+  left: 30%;
+}
+#hidden-div {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  font-family: monospace;
 }
