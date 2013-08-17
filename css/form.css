@@ -102,6 +102,16 @@ div.alert {
   color: firebrick;
   padding: 0.5em;
 }
+#lang {
+  padding-left: 20em;
+  margin-left: 2em;
+  margin-right: 2em;
+  font-size: 0.5em;
+}
+#lang>a {
+    background-image: none;
+    font-size: 12px;
+}
 select {
   border-top: 2px solid white;
   border-left: 2px solid white;
